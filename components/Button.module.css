@@ -1,0 +1,31 @@
+.button {
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    bottom: 0.5rem;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ebe8bc;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.button:hover {
+    transform: translateX(0.1rem);
+}
+
+.button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.icon {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #7a7842;
+}

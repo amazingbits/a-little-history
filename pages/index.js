@@ -1,12 +1,46 @@
-import styles from "./index.module.css";
+"use client";
+import React from 'react';
+import Button from "../components/Button";
+import Text from '../components/Text';
+
+const data = [
+    {
+        image: "/images/matilda.png",
+        text: "Era uma vez..."
+    },
+    {
+        image: "/images/matilda.png",
+        text: "Outro texto..."
+    },
+    {
+        image: "/images/matilda.png",
+        text: "Mais um texto..."
+    },
+];
 
 function Home() {
+    const buttonRef = React.useRef(null);
+
+    function handleButtonClick() {
+        alert("mudar texto...");
+    }
+    
+    function activateButton(ref) {
+        ref.current.disabled = true;
+        setTimeout(() => {
+            ref.current.disabled = false;
+        }, 100);
+    }
+
+    React.useEffect(() => {
+        // ...
+    }, []);
+
     return ( 
-    <div className={styles.container}>
-        <h1 className={styles.title}>Home</h1>
-        <p className={styles.text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+    <div className="container">
+        <img className="image" src="/images/matilda.png" alt="Matilda" />
+        <Text msg="Texto inicial..." speed={100} />
+        <Button onClick={handleButtonClick} title="Avançar" id="btn" ref={buttonRef} />
     </div>
     )
 }

@@ -25,3 +25,29 @@ body {
     max-width: 300px;
     margin: 1rem auto;
 }
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.fromLeftAnimation {
+    animation: fromLeft 1s ease-in-out forwards;
+}
+
+@keyframes fromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    25% {
+        opacity: 0.1;
+        transform: translateX(-80%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}

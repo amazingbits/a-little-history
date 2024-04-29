@@ -12,10 +12,6 @@
     transition: all .3s linear;
 }
 
-.button:hover {
-    transform: translateX(0.1rem);
-}
-
 .button:disabled {
     opacity: 0.4;
     cursor: not-allowed;

@@ -26,13 +26,6 @@ body {
     margin: 1rem auto;
 }
 
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
 .fromLeftAnimation {
     animation: fromLeft 1s ease-in-out forwards;
 }
